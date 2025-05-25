@@ -12,7 +12,7 @@ faiss-cpu==1.7.4
 pypdf==3.17.4
 
 # SQLite fix (for chromadb)
-pysqlite3-binary==0.5.2
+pysqlite3-binary==0.5.4
 
 # Environment handling
 python-dotenv==1.0.1
