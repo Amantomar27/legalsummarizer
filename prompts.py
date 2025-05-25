@@ -1,9 +1,16 @@
-CLAUSE_ANALYSIS_PROMPT = """
-You are a legal assistant. Analyze the following clause from a contract.
+from langchain.prompts import PromptTemplate
 
-1. Summarize what the clause means in plain English.
-2. Identify if this clause is risky or contains problematic terms.
-3. Suggest what might be missing (e.g., indemnity, jurisdiction, arbitration, NDA, etc.)
-Clause:
-\"\"\"{text}\"\"\"
+CLAUSE_ANALYSIS_PROMPT = PromptTemplate(
+    input_variables=["context"],
+    template="""
+You are a legal assistant. Given the following context from a contract or legal document, perform the following tasks:
+1. Summarize the key points.
+2. Highlight risky clauses (e.g., auto-renewal, indemnity, unilateral termination).
+3. Suggest any missing clauses that are commonly included in standard agreements.
+
+Context:
+{context}
+
+Respond in bullet points.
 """
+)
