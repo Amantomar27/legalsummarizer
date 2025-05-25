@@ -1,10 +1,27 @@
+# Core dependencies
 langchain==0.1.14
 langchain-community==0.0.32
 chromadb==0.4.24
+
+# Fix for sqlite3 requirement (use this or upgrade system SQLite)
 pysqlite3-binary==0.5.2
-tiktoken
-openai
-pypdf
-python-dotenv
-faiss-cpu
-streamlit
+
+# PDF loading
+pypdf==3.17.4
+
+# Tokenization
+tiktoken==0.5.1
+
+# Embeddings
+faiss-cpu==1.7.4
+
+# Streamlit app
+streamlit==1.33.0
+openai==1.30.1
+python-dotenv==1.0.1
+
+# UI Dependencies (Rich etc.)
+pygments>=2.16.1,<3.0
+rich>=13.7.0,<15.0
+markdown-it-py>=2.2.0,<3.1
+mdurl>=0.1.0
